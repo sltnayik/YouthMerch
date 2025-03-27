@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore</title>
+    
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    
+    <!-- Styles and Scripts -->
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div id="cart-counter">0</div>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="hero">
+                <h1 class="heading">Welcome to YouthCom</h1>
+                <p class="subheading">Your Gateway to the World of Books</p>
+            </div>
+        </header>
+
+        <!-- Navigation Menu -->
+        <nav class="menu">
+            <div class="brand">
+                <h1>YouthCom</h1>
+            </div>
+            <div class="toggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#featured-products">Books</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact-us">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Featured Products Section -->
+        <section id="featured-products" class="featured-products">
+            <h2>Featured Books</h2>
+            <div class="product-grid" id="product-grid">
+                <!-- Books will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>Welcome to YouthCom, your trusted online bookstore. We are dedicated to connecting readers with the books they love. Explore our collection and discover your next great read!</p>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact-us" class="contact-us">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
