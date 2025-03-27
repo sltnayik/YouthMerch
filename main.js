@@ -106,10 +106,10 @@ function handleContactFormSubmission() {
 // Handle Menu Toggle Functionality
 function handleMenuToggle() {
     const toggle = document.querySelector('.toggle');
-    const nav = document.querySelector('nav ul');
+    const menuList = document.querySelector('.menu .menu-list');
 
     toggle.addEventListener('click', function () {
-        nav.classList.toggle('slide');
+        menuList.classList.toggle('slide');
     });
 }
 
