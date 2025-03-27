@@ -473,7 +473,7 @@ img {
     }
 
     .toggle span {
-        background-color: white; /* Ensure visibility on dark menu background */
+        background-color: rgb(130, 130, 130); /* Ensure visibility on dark menu background */
     }
 
     body {
