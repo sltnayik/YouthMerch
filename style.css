@@ -41,6 +41,7 @@ img {
     animation: fadeIn 2s ease-in-out;
     max-width: 100%;
     overflow-x: hidden;
+    z-index: 1; /* Ensure hero content is behind the menu */
 }
 
 .hero::after {
@@ -99,6 +100,7 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     list-style: none;
     gap: 5px;
+    z-index: 10; /* Ensure menu is above other content */
 }
 
 .menu a {
@@ -146,8 +148,7 @@ img {
     flex-direction: column;
     justify-content: space-around;
     position: relative;
-    z-index: 2;
-
+    z-index: 15; /* Ensure toggle is above all other elements */
 }
 
 .toggle input {
@@ -447,7 +448,7 @@ img {
         height: 100vh;
         align-items: center;
         justify-content: space-evenly;
-        z-index: 1;
+        z-index: 10; /* Ensure the sliding menu is above hero content */
         transform: translateX(100%);
         opacity: 0;
         transition: all 0.5s;
@@ -460,10 +461,19 @@ img {
     .menu ul.slide {
         opacity: 1;
         transform: translateX(0);
+        z-index: 10; /* Ensure the sliding menu is above hero content */
     }
 
     .toggle {
         display: flex;
+        position: fixed; /* Ensure toggle stays in place */
+        top: 10px;
+        right: 10px;
+        z-index: 15; /* Ensure toggle is above the menu */
+    }
+
+    .toggle span {
+        background-color: white; /* Ensure visibility on dark menu background */
     }
 
     body {
