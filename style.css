@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box; /* Include padding and border in element's width/height */
 }
 
 body {
@@ -10,7 +10,7 @@ body {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 16px;
     margin: 25px;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 img {
@@ -19,6 +19,8 @@ img {
 
 .container {
     display: grid;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* Hero Section */
@@ -37,6 +39,8 @@ img {
     overflow: hidden;
     background-attachment: scroll;
     animation: fadeIn 2s ease-in-out;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .hero::after {
@@ -79,6 +83,8 @@ img {
     grid-template-columns: 1fr 2fr;
     align-items: center;
     margin-bottom: 10px;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .menu .brand {
@@ -187,6 +193,8 @@ img {
 .featured-products {
     margin: 20px 0;
     text-align: center;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .featured-products h2 {
@@ -199,6 +207,7 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    max-width: 100%; /* Prevent grid from exceeding viewport width */
 }
 
 .product {
@@ -251,6 +260,8 @@ img {
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .contact-us h2 {
@@ -304,6 +315,8 @@ img {
     text-align: center;
     border: none;
     animation: slideIn 1s ease-in-out;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .about h2 {
@@ -426,7 +439,7 @@ img {
     .menu .menu-list {
         display: flex;
         background-color: rgb(15, 15, 15);
-        position: absolute;
+        position: fixed; /* Prevent menu from affecting layout */
         flex-direction: column;
         right: 0;
         top: 0;
@@ -479,6 +492,43 @@ img {
 
     .contact-us input, .contact-us textarea, .contact-us button {
         font-size: 0.9em;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Display two books per row */
+        gap: 10px; /* Adjust gap for smaller screens */
+    }
+
+    .product {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .product img {
+        max-height: 50vh; /* Adjust image height for better fit */
+    }
+
+    .hero {
+        padding: 15px; /* Reduce padding for the hero section */
+    }
+
+    .hero .heading {
+        font-size: 1.8em; /* Adjust heading size */
+    }
+
+    .hero .subheading {
+        font-size: 0.8em; /* Adjust subheading size */
+    }
+
+    .menu .menu-list a {
+        font-size: 0.9em; /* Adjust font size for menu links */
+    }
+
+    .contact-us form {
+        gap: 8px; /* Adjust form spacing */
+    }
+
+    .contact-us input, .contact-us textarea, .contact-us button {
+        font-size: 0.85em; /* Adjust input and button font size */
     }
 }
 
